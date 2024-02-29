@@ -10,6 +10,22 @@ const displayPhone = phone => {
     // console.log(phone);
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerText = '';
+
+    console.log(phone.length);
+
+    const showAllContainer = document.getElementById('show-all-btn-container');
+    if (phone.length > 9) {
+        showAllContainer.classList.remove('hidden');
+    }
+    else {
+        showAllContainer.classList.add('hidden');
+
+    }
+
+
+    phone = phone.slice(0, 9);
+    console.log(phone.length);
+
     phone.forEach(phoneVar => {
         // console.log(phoneVar);
 
